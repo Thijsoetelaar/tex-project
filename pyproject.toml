@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "label-text"
+version = "0.1.0"
+description = "A semi-supervised approach to labeling text data."
+authors = ["Thijs van den Oetelaar <thijsvdoetelaar@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+packages = [
+    { include = "label_text" },
+    { include = "label_text/**/*.py" },
+]

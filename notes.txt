@@ -1,0 +1,5 @@
+Steps to do:
+
+1. Add cli comands to train.py DONE
+2. Create a streamlit app to classify random transactions 
+3. Check for nearest neighbors in the dataset with UMAP and HDBSCAN
