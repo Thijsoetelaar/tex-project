@@ -21,8 +21,10 @@ def label(text):
 
     doc_term_matrix = pd.DataFrame(x.toarray(), columns=model["vectorizer"].get_feature_names_out())
     a = doc_term_matrix.loc[:, (doc_term_matrix != 0).all(axis=0)]
-    b = pd.concat([a,feature_importance[a.columns]],ignore_index=True)
-    print(b)
+    b = feature_importance[a.columns]
+
+    click.echo(a.T)
+    click.echo(b.T)
 
     y = model["model"].predict(x)
     y_prob = model["model"].predict_proba(x).round(2)
